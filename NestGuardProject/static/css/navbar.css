@@ -1,0 +1,102 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+.AllItens {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+    
+}
+
+.navbarAll {
+    background-color: #F5AB00; /* Cor amarela conforme a imagem */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 0 0 50px 50px;
+    
+}
+
+.navbarComplete-component {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.itens-component {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-component img {
+    height: 70px; /* Tamanho do logo */
+}
+
+.menuItens-component {
+    display: flex;
+    margin-left: 20px;
+}
+
+.menuItens-component a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menuItens-component a:hover {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Buttons-component {
+    display: flex;
+    align-items: center;
+}
+
+.PrimaryButton-component {
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 8px 28px;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.PrimaryButton-component span {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    font-size: 24px;   /* Tamanho do ícone */
+}
+
+.PrimaryButton-component:hover {
+    background-color: #181717; /* Cor de hover */
+    color: white;
+}
+
+
+.IconButton-homepage {
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    color: black;
+}
+
+.darkModeHomepage {
+    font-size: 24px;
+    color: black;
+}
