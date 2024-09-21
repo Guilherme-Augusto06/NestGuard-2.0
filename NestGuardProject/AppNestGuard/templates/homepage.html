@@ -3,41 +3,38 @@
 
 {% block body %}
 {% include "navbar.html" %}
-<div class="homepageNestGuard">
-    <div class="homepageNestGuard-component">
-        <!-- Gráfico superior esquerdo -->
-        <div class="homepageNestGuard-decorator top-left">
-            <img src="{% static 'img/Vector1.png' %}" alt="Decoration 1">
-        </div>
+<div class="particles-container">
+    <div id="particles-js"></div> <!-- Partículas no fundo -->
 
-        <!-- Gráfico superior direito -->
-        <div class="homepageNestGuard-decorator top-right">
-            <img src="{% static 'img/Vector2.png' %}" alt="Decoration 2">
-        </div>
-
-        <!-- Conteúdo central -->
-        <div class="homepageNestGuard-text">
-            <h1 class="homepageNestGuard-title">NestGuard</h1>
-            <p class="homepageNestGuard-description">Aplicações Web</p>
-            <div class="Buttons-component-SaibaMais">
-                <a href="#" class="PrimaryButton-component-SaibaMais">
-                    Saiba Mais
-                    <span class="material-symbols-outlined">arrow_forward</span>
-                </a>
+    <div class="homepageNestGuard"> <!-- Conteúdo principal -->
+        <div class="homepageNestGuard-component">
+            <!-- Gráficos decorativos e conteúdo -->
+            <div class="homepageNestGuard-decorator top-left">
+                <img src="{% static 'img/Vector1.png' %}" alt="Decoration 1">
             </div>
-        </div>
-
-        <!-- Gráfico inferior esquerdo -->
-        <div class="homepageNestGuard-decorator bottom-left">
-            <img src="{% static 'img/Vector2.png' %}" alt="Decoration 3">
-        </div>
-
-        <!-- Gráfico inferior direito -->
-        <div class="homepageNestGuard-decorator bottom-right">
-            <img src="{% static 'img/Vector1.png' %}" alt="Decoration 4">
+            <div class="homepageNestGuard-decorator top-right">
+                <img src="{% static 'img/Vector2.png' %}" alt="Decoration 2">
+            </div>
+            <div class="homepageNestGuard-text">
+                <h1 class="homepageNestGuard-title">NestGuard</h1>
+                <p class="homepageNestGuard-description">Aplicações Web</p>
+                <div class="Buttons-component-SaibaMais">
+                    <a href="#" class="PrimaryButton-component-SaibaMais">
+                        Saiba Mais
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+            <div class="homepageNestGuard-decorator bottom-left">
+                <img src="{% static 'img/Vector2.png' %}" alt="Decoration 3">
+            </div>
+            <div class="homepageNestGuard-decorator bottom-right">
+                <img src="{% static 'img/Vector1.png' %}" alt="Decoration 4">
+            </div>
         </div>
     </div>
 </div>
+
 
 
 

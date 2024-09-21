@@ -4,12 +4,13 @@ body, html {
     height: 100%;
     background-color: #181717;
 }
-
 .homepageNestGuard {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh; /* Altura completa da tela */
+    height: 90vh; /* Tamanho do conteúdo */
+    z-index: 2; /* Certifique-se de que o conteúdo esteja acima das partículas */
 }
 
 .homepageNestGuard-component {
@@ -26,6 +27,12 @@ body, html {
     margin-bottom: -40px;
     text-align: center;
 }
+.homepageNestGuard-title,
+.homepageNestGuard-description,
+.PrimaryButton-component-SaibaMais {
+    z-index: 3; /* Garante que o texto e botões fiquem acima de tudo */
+}
+
 
 .homepageNestGuard-description {
     font-family: 'Segoe UI Variable', 'Segoe UI', sans-serif;
@@ -112,4 +119,40 @@ body, html {
 .PrimaryButton-component span {
     margin-right: 10px; /* Espaço entre o ícone e o texto */
     font-size: 24px;   /* Tamanho do ícone */
+}
+
+/* Estilos gerais já existentes */
+
+@media only screen and (max-width: 768px) {
+    /* Remove imagens decorativas em telas menores (como celulares) */
+    .homepageNestGuard-decorator {
+        display: none;
+    }
+
+    /* Centraliza o texto e o botão no centro da tela */
+    .homepageNestGuard {
+        height: 100vh; /* Garante que a altura ocupe a tela toda */
+    }
+
+    /* Ajusta o tamanho do título e descrição para telas pequenas */
+    .homepageNestGuard-title {
+        font-size: 40px; /* Reduz o tamanho do título */
+        margin-bottom: 0px; /* Diminui o espaçamento entre o título e a descrição */
+    }
+
+    .homepageNestGuard-description {
+        font-size: 20px; /* Reduz o tamanho da descrição */
+    }
+
+    .PrimaryButton-component-SaibaMais {
+        font-size: 18px; /* Ajusta o tamanho do botão */
+        padding: 10px 20px; /* Ajusta o espaçamento do botão */
+    }
+
+    /* Alinha o texto e o botão no meio da tela */
+    .homepageNestGuard-text {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
