@@ -69,31 +69,7 @@ body, html {
     background-color: #e0a800;
 }
 
-.homepageNestGuard-decorator {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-}
 
-.homepageNestGuard-decorator.top-left {
-    top: 190px;
-    left: 150px;
-}
-
-.homepageNestGuard-decorator.top-right {
-    top: 190px;
-    right: 200px;
-}
-
-.homepageNestGuard-decorator.bottom-left {
-    bottom: 190px;
-    left: 100px;
-}
-
-.homepageNestGuard-decorator.bottom-right {
-    bottom: 190px;
-    right: 200px;
-}
 .Buttons-component-SaibaMais {
     display: flex;
     align-items: center;
@@ -136,12 +112,12 @@ body, html {
 
     /* Ajusta o tamanho do título e descrição para telas pequenas */
     .homepageNestGuard-title {
-        font-size: 40px; /* Reduz o tamanho do título */
+        font-size: 60px; /* Reduz o tamanho do título */
         margin-bottom: 0px; /* Diminui o espaçamento entre o título e a descrição */
     }
 
     .homepageNestGuard-description {
-        font-size: 20px; /* Reduz o tamanho da descrição */
+        font-size: 30px; /* Reduz o tamanho da descrição */
     }
 
     .PrimaryButton-component-SaibaMais {
