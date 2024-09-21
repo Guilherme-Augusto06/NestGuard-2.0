@@ -1,4 +1,5 @@
 {% load static %}
+
 <header class="AllItens">
     <nav class="navbarAll">
         <div class="navbarComplete-component">
@@ -7,21 +8,34 @@
                     <img src="{% static 'img/IconeNestGuard.png' %}" alt="Logo NestGuard">
                 </a>
             </div>
+
             <div class="menuItens-component">
+                <!-- Botão do menu hamburger, visível apenas em resoluções menores -->
+                <button class="hamburger-button">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+
+                <!-- Itens do menu, ocultados em resoluções menores -->
                 <a href="#" class="menu-link">Home</a>
                 <a href="#" class="menu-link">Serviços</a>
                 <a href="#" class="menu-link">Contato</a>
                 <a href="#" class="menu-link">Valores</a>
                 <a href="#" class="menu-link">Sobre</a>
             </div>
+
             <div class="Buttons-component">
                 <a href="#" class="PrimaryButton-component">
-                    <span class="material-symbols-outlined">
-                        login
-                    </span>
+                    <span class="material-symbols-outlined">login</span>
                     Entrar
                 </a>
             </div>
         </div>
     </nav>
 </header>
+
+<script>
+    // Script para alternar a exibição do menu em resoluções menores
+    document.querySelector('.hamburger-button').addEventListener('click', () => {
+        document.querySelector('.menuItens-component').classList.toggle('active');
+    });
+</script>

@@ -2,24 +2,23 @@ body, html {
     margin: 0;
     padding: 0;
 }
+
 .AllItens {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    
-    
 }
 
 .navbarAll {
-    background-color: #F5AB00; /* Cor amarela conforme a imagem */
+    background-color: #F5AB00; /* Cor amarela */
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     border-radius: 0 0 50px 50px;
-    
+    position: relative; /* Mantém o contexto de posicionamento */
 }
 
 .navbarComplete-component {
@@ -29,12 +28,6 @@ body, html {
     width: 100%;
     margin-left: 40px;
     margin-right: 40px;
-}
-
-.itens-component {
-    display: flex;
-    align-items: center;
-    width: 100%;
 }
 
 .logo-component img {
@@ -56,7 +49,6 @@ body, html {
 }
 
 .menuItens-component a:hover {
-    text-decoration: none;
     font-weight: bold;
 }
 
@@ -84,19 +76,66 @@ body, html {
 }
 
 .PrimaryButton-component:hover {
-    background-color: #181717; /* Cor de hover */
+    background-color: #181717;
     color: white;
 }
 
-
-.IconButton-homepage {
-    margin-right: 20px;
-    cursor: pointer;
+.hamburger-button {
+    display: none; /* Escondido em telas maiores */
+    background-color: transparent;
+    border: none;
+    padding: 10px;
     font-size: 24px;
-    color: black;
+    cursor: pointer;
 }
 
-.darkModeHomepage {
+.hamburger-button span {
     font-size: 24px;
-    color: black;
+}
+
+/* Exibir o menu hamburger e ocultar os links em resoluções menores */
+@media only screen and (max-width: 768px) {
+    .hamburger-button {
+        display: block;
+    }
+    
+    .menu-link {
+        display: none;
+        
+    }
+    
+    .menuItens-component.active .menu-link {
+        display: block;
+        margin: 10px 0;
+        
+    }
+
+    /* Ajustar o menu ativo */
+    .menuItens-component.active {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 80px; /* Alinha o menu dropdown logo abaixo da navbar */
+        left: 0;
+        width: 100%; /* Faz o menu ocupar a largura total */
+        background-color: #F5AB00; /* Mesma cor da navbar */
+        padding: 20px;
+        border-radius: 0 0 50px 50px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para dar destaque */
+        z-index: 999; /* Garantir que o menu fique acima de outros elementos */
+    }
+
+    /* Corrigir o layout do menuItens-component para que ele tenha comportamento adequado */
+    .menuItens-component {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 0%;
+
+        
+    }
+    .navbarAll {
+        border-radius: 0 0 0 0;
+    }
 }
