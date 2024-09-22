@@ -149,83 +149,32 @@ body, html {
     font-weight: 600;
 }
 
-
-/* Estilos responsivos */
-/* Estilos responsivos *//* Estilos responsivos */
-@media (max-width: 1200px) {
-    .titleHomepageNestGuard-01 {
-        font-size: 4rem; /* Reduz o tamanho da fonte */
-    }
-
-    .subtitlesHomepageNestGuard-01 {
-        font-size: 1.8rem;
-    }
-
-    .subtitlesHomepage2NestGuard-01 {
-        font-size: 1.2rem;
-    }
-
-    .TransparentBlackButton-componentNestGuard-01 {
-        padding: 12px 8%;
-        font-size: 1.3rem; /* Reduz o tamanho da fonte do botão */
-    }
-}
-
-@media (max-width: 768px) {
-    .titleHomepageNestGuard-01 {
-        font-size: 3rem; /* Reduz o tamanho da fonte ainda mais para celulares */
-    }
-
-    .subtitlesHomepageNestGuard-01 {
-        font-size: 1.5rem;
-    }
-
-    .subtitlesHomepage2NestGuard-01 {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .TransparentBlackButton-componentNestGuard-01 {
-        padding: 10px 6%;
-        font-size: 1.2rem;
-    }
-
-    .itensHomepageNestGuard-01 {
-        flex-direction: column; /* Muda a direção do flex para coluna */
-        text-align: center; /* Centraliza o conteúdo em telas menores */
-    }
-
+@media only screen and (max-width: 768px) {
     .iconHomepageNestGuard-01 {
-        margin-top: 2rem;
+        display: none;
     }
-}
-
-
-@media (max-width: 768px) {
+    
+    /* Adicionar mais imagens ou componentes que quer ocultar */
+    .ImageIcon-componentNestGuard-01 {
+        display: none;
+    }
     .titleHomepageNestGuard-01 {
-        font-size: 3rem; /* Reduz o tamanho da fonte ainda mais para celulares */
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+    }
+    .PrimaryButton-component-SaibaMais-01{
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    .Buttons-component-SaibaMais-01 {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .AllTextsNestGuard-01 {
+        margin-top: 20%;
     }
 
-    .subtitlesHomepageNestGuard-01 {
-        font-size: 1.5rem;
-    }
 
-    .subtitlesHomepage2NestGuard-01 {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .TransparentBlackButton-componentNestGuard-01 {
-        padding: 10px 6%;
-        font-size: 1.2rem;
-    }
-
-    .itensHomepageNestGuard-01 {
-        flex-direction: column; /* Muda a direção do flex para coluna */
-        text-align: center; /* Centraliza o conteúdo em telas menores */
-    }
-
-    .iconHomepageNestGuard-01 {
-        margin-top: 2rem;
-    }
 }
