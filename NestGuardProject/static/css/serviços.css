@@ -1,0 +1,231 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #181717;
+}
+.subtitlesHomepageNestGuard-01 {
+    font-size: 2rem; /* Unidades relativas */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+
+.subtitlesHomepage2NestGuard-01 {
+    font-size: 1.5rem; /* Unidades relativas */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin: 0 0 2rem 0; /* Unidades relativas */
+}
+
+.img-homepageNestGuard-01 {
+    max-width: 100%; /* Ajusta a imagem ao tamanho do container */
+}
+
+.itensHomepageNestGuard-01 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6%;
+    
+
+}
+
+.iconHomepageNestGuard-01 {
+    width: 600px;
+    height: 600px;
+    display: flex;
+}
+
+.TransparentBlackButton-componentNestGuard-01 {
+    margin-top: 10px;
+    padding: 12px 10%; /* Usa percentual para melhor adaptação */
+    font-weight: bold;
+    border: 3px solid var(--textBorder-color);
+    border-radius: 10px;
+    margin-right: 44px;
+    font-family: sans-serif;
+    color: var(--text-color);
+    font-size: 1.5rem; /* Unidades relativas */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.TransparentBlackButton-component-01:hover {
+    transform: scale(1.1); /* Aumenta o botão em 10% */
+    color: var(--color-logo-gradB); /* Opcional: Muda a cor do texto ao passar o mouse */
+    border: 3px solid var(--color-logo-gradB);
+}
+
+
+
+.titleHomepageNestGuard-01 {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Poppins;
+    margin: 0;
+    color: white;
+
+
+
+
+}
+.highlight-01 {
+    color: #F5AB00; /* Cor amarela */
+}
+.ButtonSaibaMais-01 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    font-size: 24;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center; /* Garante que o texto dentro do botão esteja centralizado */
+    transition: background-color 0.3s;
+    cursor: pointer; /* Adiciona o cursor pointer para melhorar a usabilidade */
+}
+
+.ButtonSaibaMais-01:hover {
+    background-color: #e0a800;
+}
+
+
+.Buttons-component-SaibaMais-01 {
+    display: flex;
+    align-items: center;
+}
+
+.PrimaryButton-component-SaibaMais-01 {
+    background-color: #F5AB00;
+    border: 2px solid black;
+    padding: 8px 28px;
+    border-radius: 100px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+.PrimaryButton-component-SaibaMais-01:hover {
+    background-color: #000000;
+    color: #F5AB00;
+}
+.PrimaryButton-component-01 span {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    font-size: 24px;   /* Tamanho do ícone */
+}
+/* Estilizando o banner de serviços */
+.banner-services {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F5AB00;
+    margin-left: 10%;
+    border-radius: 500px;
+    margin-top: 150px;
+    width: 80%;
+}
+
+.service-item {
+    text-align: center;
+    color: #000;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.service-item img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* Estilos responsivos */
+/* Estilos responsivos *//* Estilos responsivos */
+@media (max-width: 1200px) {
+    .titleHomepageNestGuard-01 {
+        font-size: 4rem; /* Reduz o tamanho da fonte */
+    }
+
+    .subtitlesHomepageNestGuard-01 {
+        font-size: 1.8rem;
+    }
+
+    .subtitlesHomepage2NestGuard-01 {
+        font-size: 1.2rem;
+    }
+
+    .TransparentBlackButton-componentNestGuard-01 {
+        padding: 12px 8%;
+        font-size: 1.3rem; /* Reduz o tamanho da fonte do botão */
+    }
+}
+
+@media (max-width: 768px) {
+    .titleHomepageNestGuard-01 {
+        font-size: 3rem; /* Reduz o tamanho da fonte ainda mais para celulares */
+    }
+
+    .subtitlesHomepageNestGuard-01 {
+        font-size: 1.5rem;
+    }
+
+    .subtitlesHomepage2NestGuard-01 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .TransparentBlackButton-componentNestGuard-01 {
+        padding: 10px 6%;
+        font-size: 1.2rem;
+    }
+
+    .itensHomepageNestGuard-01 {
+        flex-direction: column; /* Muda a direção do flex para coluna */
+        text-align: center; /* Centraliza o conteúdo em telas menores */
+    }
+
+    .iconHomepageNestGuard-01 {
+        margin-top: 2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .titleHomepageNestGuard-01 {
+        font-size: 3rem; /* Reduz o tamanho da fonte ainda mais para celulares */
+    }
+
+    .subtitlesHomepageNestGuard-01 {
+        font-size: 1.5rem;
+    }
+
+    .subtitlesHomepage2NestGuard-01 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .TransparentBlackButton-componentNestGuard-01 {
+        padding: 10px 6%;
+        font-size: 1.2rem;
+    }
+
+    .itensHomepageNestGuard-01 {
+        flex-direction: column; /* Muda a direção do flex para coluna */
+        text-align: center; /* Centraliza o conteúdo em telas menores */
+    }
+
+    .iconHomepageNestGuard-01 {
+        margin-top: 2rem;
+    }
+}
