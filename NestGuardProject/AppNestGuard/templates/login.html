@@ -3,6 +3,33 @@
 
 {% block body %}
 {% include "navbar.html" %}
-
-
+<div class="containerLoginNest">
+    <div class="img-containerLoginNest">
+        <img src="{% static 'img/LoginIcon.png' %}" alt="Login Icon">
+    </div>
+    <div class="containerInputsLoginNest">
+        <h1>Login</h1>
+        <div class="input-containerLoginNest">
+            <span class="material-symbols-outlined" style="color: white;">
+                person
+                </span>
+            <input type="text" placeholder="Telefone"  />
+        </div>
+        <div class="input-containerLoginNest">
+            <span class="material-symbols-outlined" style="color: white;">
+                mail
+                </span>
+            <input type="text" placeholder="Email"  />
+        </div>
+        <div class="input-containerLoginNest">
+            <span class="material-symbols-outlined" style="color: white;">
+                password
+                </span>
+            <input type="text" placeholder="Senha" />
+        </div>
+        <a href="home" class="PrimaryButton-component-Login">
+            Entrar
+        </a>
+    </div>
+</div>
 {% endblock %}

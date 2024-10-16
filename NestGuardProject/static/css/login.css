@@ -1,0 +1,69 @@
+
+.containerLoginNest{
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+    gap: 10%;  /* Distância entre imagem e campos de input */
+
+}
+.containerInputsLoginNest h1{
+    color: white;
+    font-size: 36px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.input-containerLoginNest {
+    display: flex;
+    align-items: center;
+
+    border: 2px solid #f0a500;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    margin: 10px 0;
+  }
+
+  .input-containerLoginNest img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+
+  .input-containerLoginNest input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .input-containerLoginNest input::placeholder {
+    color: #aaa;
+  }
+
+  .input-containerLoginNest input:focus::placeholder {
+    color: transparent;
+  }
+
+  .PrimaryButton-component-Login {
+    background-color: #F5AB00;
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 100px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    display: block;  /* Ajusta para se comportar como um bloco */
+    margin: 20px auto;  /* Centraliza horizontalmente com margem automática */
+    text-align: center;  /* Garante que o texto fique alinhado no meio */
+    font-size: 18px;
+    width: 150px;  /* Controla a largura */
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.PrimaryButton-component-Login:hover {
+    background-color: #000000;
+    color: #F5AB00;
+}
