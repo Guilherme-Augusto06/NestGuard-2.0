@@ -1,0 +1,86 @@
+/* A imagem de fundo ocupará uma posição fixa atrás do conteúdo */
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Largura completa da página */
+    height: 55vh; /* Altura menor, você pode ajustar esse valor */
+
+}
+
+/* Posiciona o texto sobre a imagem */
+.header-homepageNestGuard {
+    position: absolute;
+    width: 100%;
+    top: 55%;
+    left: 50%;
+    font-family: 'Segoe UI Variable', 'Segoe UI', sans-serif;
+    font-size: 25px;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #fff;
+    z-index: 2; /* Garante que o texto fique sobre a imagem */
+}
+
+/* Estilos para a seção inferior */
+.tecnologias-homepageNestGuard {
+    text-align: center;
+    padding: 40px;
+
+    color: #f5f5f5;
+    z-index: 3; /* Maior prioridade */
+    position: relative;
+}
+
+.container-tecnologias-homepageNestGuard {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.item-homepageNestGuard {
+    width: 30%;
+    text-align: center;
+}
+
+.item-homepageNestGuard img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+.logo-img {
+    width: 400px; /* Ajuste o tamanho conforme necessário */
+    height: 300px;
+    object-fit: contain;
+}
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Espaço entre a imagem e o texto */
+}
+.tecnologias-homepageNestGuard{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.tecnologias-homepageNestGuard h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #F5AB00;
+}
+
+.tecnologias-homepageNestGuard p{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.tecnologias-homepageNestGuard h3{
+    font-size: 20px;
+}

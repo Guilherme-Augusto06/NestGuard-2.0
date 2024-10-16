@@ -12,3 +12,6 @@ def login(request):
 
 def cadastro(request):
     return render(request, 'cadastro.html')
+
+def welcomeHomepage(request):
+    return render(request, 'welcomeHomepage.html')
