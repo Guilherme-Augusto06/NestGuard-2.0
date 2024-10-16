@@ -2,9 +2,9 @@
 .containerLoginNest{
     display: flex;
     justify-content: center;
-    padding: 13%;
-    gap: 10%;  /* Distância entre imagem e campos de input */
-    
+    padding: 10%;
+    gap: 8%;  /* Distância entre imagem e campos de input */
+    align-items: center;
 
 }
 
@@ -106,6 +106,9 @@
 }
 
 @media (max-width: 768px) {
+    .containerInputsLoginNest h1{
+        font-size: 36px; /* Reduz o tamanho da fonte */
+    }
     .img-containerLoginNest {
         display: none; /* Esconde a imagem em telas pequenas */
     }
