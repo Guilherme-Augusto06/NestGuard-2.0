@@ -2,27 +2,61 @@
 .containerLoginNest{
     display: flex;
     justify-content: center;
-    padding: 10%;
+    padding: 13%;
     gap: 10%;  /* Distância entre imagem e campos de input */
+    
 
+}
+
+.containerInputsLoginNest p{
+    color: white;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.containerInputsLoginNest{
+    width: 350px;
 }
 .containerInputsLoginNest h1{
     color: white;
-    font-size: 36px;
-
+    font-size: 44px;
+    align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 .input-containerLoginNest {
     display: flex;
     align-items: center;
-
+    background-color: #f0a500;
     border: 2px solid #f0a500;
     border-radius: 10px;
     padding: 10px;
-    width: 300px;
     margin: 10px 0;
-  }
+    transition: background-color 0.3s, color 0.3s;  /* Transição suave */
+}
+
+.input-containerLoginNest:hover {
+    background-color: transparent;  /* Remove a cor de fundo no hover */
+    border-color: #f0a500;  /* Mantém a borda */
+}
+
+
+
+.input-containerLoginNest:hover {
+    background-color: transparent;
+    border-color: #f0a500;
+}
+
+.icon-input {
+    color: black;
+    font-size: 24px;
+    transition: color 0.3s;  /* Transição suave da cor */
+}
+
+.input-containerLoginNest:hover .icon-input {
+    color: white;  /* Ícone fica preto no hover */
+}
+
 
   .input-containerLoginNest img {
     width: 24px;
@@ -40,17 +74,20 @@
   }
 
   .input-containerLoginNest input::placeholder {
-    color: #aaa;
+    color: black;
   }
 
-  .input-containerLoginNest input:focus::placeholder {
-    color: transparent;
-  }
+    .input-containerLoginNest input:hover::placeholder {
+        color: white;
+    }
+.img-containerLoginNest{
+    margin-top: 2%;
+}
 
   .PrimaryButton-component-Login {
     background-color: #F5AB00;
     border: 2px solid black;
-    padding: 10px 20px;
+    padding: 6px 20px;
     border-radius: 100px;
     color: black;
     text-decoration: none;
@@ -66,4 +103,26 @@
 .PrimaryButton-component-Login:hover {
     background-color: #000000;
     color: #F5AB00;
+}
+
+@media (max-width: 768px) {
+    .img-containerLoginNest {
+        display: none; /* Esconde a imagem em telas pequenas */
+    }
+
+    .containerLoginNest {
+        padding: 10%; /* Ajusta o padding para evitar excesso de espaço */
+    }
+
+    .containerInputsLoginNest {
+
+        
+        width: 100%; /* Inputs ocupam quase toda a tela */
+        max-width: none; /* Remove o limite máximo de largura */
+    }
+
+    .PrimaryButton-component-Login {
+        width: 100%; /* O botão ocupa toda a largura em telas menores */
+        max-width: 150px; /* Define um limite de largura */
+    }
 }
