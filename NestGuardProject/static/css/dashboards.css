@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     width: 100%; /* Largura completa da página */
-    height: 55vh; /* Altura menor, você pode ajustar esse valor */
+    height: 100%; /* Altura menor, você pode ajustar esse valor */
 
 }
 

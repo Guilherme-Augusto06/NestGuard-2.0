@@ -18,3 +18,6 @@ def welcomeHomepage(request):
 
 def sites(request):
     return render(request, 'sites.html')
+
+def segurança(request):
+    return render(request, 'segurança.html')

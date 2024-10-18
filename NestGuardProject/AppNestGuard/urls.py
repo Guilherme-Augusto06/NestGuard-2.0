@@ -8,4 +8,5 @@ urlpatterns = [
     path('cadastro', views.cadastro, name="cadastro"),
     path('homepage', views.welcomeHomepage, name="welcomeHomepage"),
     path('sites', views.sites, name="sites"),
+    path('segurança', views.segurança, name="segurança"),
 ]

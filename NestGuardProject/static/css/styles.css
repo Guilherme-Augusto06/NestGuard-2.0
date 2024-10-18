@@ -4,11 +4,12 @@
 @import url(navbar.css);
 @import url(homepage.css);
 @import url(particles.css);
-@import url(serviços.css);
+@import url(dashboards.css);
 @import url(login.css);
 @import url(welcomeHomepage.css);
 @import url(vectorFooter.css);
 @import url(sites.css);
+@import url(segurança.css);
 /* Define o contêiner de partículas e o conteúdo */
 
 
