@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 def homepage(request):
@@ -17,7 +18,12 @@ def welcomeHomepage(request):
     return render(request, 'welcomeHomepage.html')
 
 def sites(request):
-    return render(request, 'sites.html')
+    context = {}
+    nestGuardSitesPage = NestGuardSitesPage.objects.all()
+    nestGuardCard = NestGuardCard.objects.all()
+    context['nestGuardSitesPage'] = nestGuardSitesPage
+    context['nestGuardCard'] = nestGuardCard
+    return render(request, 'sites.html', context)
 
 def segurança(request):
     return render(request, 'segurança.html')

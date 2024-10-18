@@ -7,79 +7,46 @@
 
 <div class="background-container">
     <img src="{% static 'img/vector.png' %}" alt="Fundo" class="background-img">
-
+    {% for item in nestGuardSitesPage %}
     <header class="header-homepageNestGuard">
         <div class="title-container">
 
-            <h1 style="color: black;">Desenvolvimento de Sites <br>Totalmente personalizados!</h1>
+            <h1 style="color: black;">{{ item.titulo1 }}<br>{{ item.titulo2 }}</h1>
             <img src="{% static 'img/djangoReactImg.png' %}" alt="Logo" class="logo-img">
         </div>
     </header>
 </div>
 <section class="tecnologias-homepageNestGuard sitesSectionInf">
-    <h2>Como funciona?</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat
-        est.
-        Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam. Vitae et, tortor pulvinar risus pulvinar sit amet.
-        Id vel in nam malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat
-        pellentesque volutpat est.
-        Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam. Vitae et, tortor pulvinar risus pulvinar sit amet.
-        Id vel in nam malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat
-        pellentesque volutpat est.
-        Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam. Vitae et, tortor pulvinar risus pulvinar sit amet.
-        Id vel in nam malesuada.</p>
+    <h2>{{ item.titulo3 }}</h2>
+    <p>{{ item.descricao3 }}</p>
 
-    <h2 style="margin-top: 10%;">Tecnologias</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat
-        est.
-        Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam. Vitae et, tortor pulvinar risus pulvinar sit amet.
-        Id vel in nam malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat
-        pellentesque volutpat est.
-        Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam. Vitae et, tortor pulvinar risus pulvinar sit amet.
-        Id vel in nam malesuada.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat
-        pellentesque volutpat est.
-        Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam. Vitae et, tortor pulvinar risus pulvinar sit amet.
-        Id vel in nam malesuada.</p>
+    <h2 style="margin-top: 10%;">{{ item.titulo4 }}</h2>
+    <p>{{ item.descricao4 }}</p>
 
 </section>
+{% endfor %}
 <div class="containerSitesNestGuard">
+    {% for item in nestGuardCard %}
     <div class="cardSitesNestGuard">
         <div class="iconSitesNestGuard">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python">
+            <img src="{{ item.link_img }}" alt="Python">
         </div>
-        <h2>Python</h2>
-        <p>Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.</p>
-        <button>Saiba mais</button>
+        <h2>{{ item.titulo }}</h2>
+        <p>{{ item.descricao }}</p>
+        <button class="saiba-mais-btn" data-titulo="{{ item.titulo }}" data-img="{{ item.link_img }}" data-descricao="{{ item.descricaoModal }}">
+            Saiba mais
+        </button>
     </div>
-
-    <div class="cardSitesNestGuard">
-        <div class="iconSitesNestGuard">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="Django">
-        </div>
-        <h2>Django</h2>
-        <p>Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.</p>
-        <button>Saiba mais</button>
-    </div>
-
-    <div class="cardSitesNestGuard">
-        <div class="iconSitesNestGuard">
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="HTML e CSS">
-        </div>
-        <h2>HTML e CSS</h2>
-        <p>Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.</p>
-        <button>Saiba mais</button>
-    </div>
-    <div class="cardSitesNestGuard">
-        <div class="iconSitesNestGuard">
-            <img src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png" alt="React">
-
-        </div>
-        <h2>React</h2>
-        <p>Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.</p>
-        <button>Saiba mais</button>
+    {% endfor %}
+</div>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modal-image" class="modal-image" src="" alt="Imagem da tecnologia">
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
     </div>
 </div>
-
 
 {% include "vectorFooter.html" %}
 {% endblock %}
