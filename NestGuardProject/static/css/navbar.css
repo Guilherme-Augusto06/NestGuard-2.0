@@ -9,6 +9,7 @@
 }
 
 .navbarAll {
+    padding-top: 80px;
     background-color: #F5AB00; /* Cor amarela */
     height: 80px;
     display: flex;
@@ -16,7 +17,7 @@
     justify-content: space-between;
     width: 100%;
     border-radius: 0 0 50px 50px;
-    position: relative; /* Mantém o contexto de posicionamento */
+    position: fixed; /* Mantém o contexto de posicionamento */
     z-index: 9; /* Garante que o menu fique acima de outros elementos */
 }
 

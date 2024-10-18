@@ -1,273 +1,183 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #181717;
+/* A imagem de fundo ocupará uma posição fixa atrás do conteúdo */
+.background-container {
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 55vh; /* Ajuste conforme necessário */
+    overflow: hidden;
+    margin-top: -60px; /* Para dar espaço à navbar */
+}
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Largura completa da página */
+    height: 55vh; /* Altura menor, você pode ajustar esse valor */
 
-  
-    /* Dark mode colors and gradient */
-    background: #121212; /* Fallback for browsers that don't support gradients */
-    background: linear-gradient(
-      135deg,
-      #121212 25%,
-      #1a1a1a 25%,
-      #1a1a1a 50%,
-      #121212 50%,
-      #121212 75%,
-      #1a1a1a 75%,
-      #1a1a1a
-    );
-    background-size: 40px 40px;
-  
-    /* Animation */
-    animation: move 4s linear infinite;
-  }
-  
-  @keyframes move {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 40px 40px;
-    }
-  }
-  
-
-.subtitlesHomepageNestGuard-01 {
-    font-size: 2rem; /* Unidades relativas */
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    margin: 0;
 }
 
-.subtitlesHomepage2NestGuard-01 {
-    font-size: 1.5rem; /* Unidades relativas */
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    margin: 0 0 2rem 0; /* Unidades relativas */
+/* Posiciona o texto sobre a imagem */
+.header-homepageNestGuard {
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    left: 50%;
+    font-family: 'Segoe UI Variable', 'Segoe UI', sans-serif;
+    font-size: 25px;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #fff;
+    z-index: 2; /* Garante que o texto fique sobre a imagem */
 }
 
-.img-homepageNestGuard-01 {
-    max-width: 100%; /* Ajusta a imagem ao tamanho do container */
+/* Estilos para a seção inferior */
+.tecnologias-homepageNestGuard {
+    text-align: center;
+    padding: 40px;
+
+    color: #f5f5f5;
+    z-index: 3; /* Maior prioridade */
+    position: relative;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.itensHomepageNestGuard-01 {
+.container-tecnologias-homepageNestGuard {
     display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.item-homepageNestGuard {
+    width: 15%;
+    text-align: center;
+}
+
+.item-homepageNestGuard img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+.logo-img {
+    width: 400px; /* Ajuste o tamanho conforme necessário */
+    height: 300px;
+    object-fit: contain;
+}
+.title-container {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-
-    
-
+    gap: 15px; /* Espaço entre a imagem e o texto */
 }
 
-.iconHomepageNestGuard-01 {
-    width: 600px;
-    height: 600px;
-    display: flex;
-}
-
-.TransparentBlackButton-componentNestGuard-01 {
-    margin-top: 10px;
-    padding: 12px 10%; /* Usa percentual para melhor adaptação */
-    font-weight: bold;
-    border: 3px solid var(--textBorder-color);
-    border-radius: 10px;
-    margin-right: 44px;
-    font-family: sans-serif;
-    color: var(--text-color);
-    font-size: 1.5rem; /* Unidades relativas */
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.TransparentBlackButton-component-01:hover {
-    transform: scale(1.1); /* Aumenta o botão em 10% */
-    color: var(--color-logo-gradB); /* Opcional: Muda a cor do texto ao passar o mouse */
-    border: 3px solid var(--color-logo-gradB);
-}
-
-
-
-.titleHomepageNestGuard-01 {
-    font-size: 50px;
-    font-weight: bold;
-    font-family: Poppins;
-    margin: 0;
-    color: white;
-
-
-
-
-}
-.highlight-01 {
-    color: #F5AB00; /* Cor amarela */
-}
-.ButtonSaibaMais-01 {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ffc107;
-    color: #000;
-    border: none;
-    font-size: 24;
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center; /* Garante que o texto dentro do botão esteja centralizado */
-    transition: background-color 0.3s;
-    cursor: pointer; /* Adiciona o cursor pointer para melhorar a usabilidade */
-}
-
-.ButtonSaibaMais-01:hover {
-    background-color: #e0a800;
-}
-
-
-.Buttons-component-SaibaMais-01 {
-    display: flex;
-    align-items: center;
-}
-
-.PrimaryButton-component-SaibaMais-01 {
-    background-color: #F5AB00;
-    border: 2px solid black;
-    padding: 8px 7px;
-    border-radius: 100px;
-    color: black;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    font-size: 24px;
-    align-items: center;
-    transition: background-color 0.3s;
-}
-.PrimaryButton-component-SaibaMais-01:hover {
-    background-color: #000000;
+.tecnologias-homepageNestGuard h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
     color: #F5AB00;
 }
-.PrimaryButton-component-01 span {
-    margin-right: 10px; /* Espaço entre o ícone e o texto */
-    font-size: 24px;   /* Tamanho do ícone */
+
+.tecnologias-homepageNestGuard p{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
-/* Estilizando o banner de serviços */
-.banner-services {
+.tecnologias-homepageNestGuard h3{
+    font-size: 20px;
+}
+
+/* Seção de features */
+/* Seção de features */
+.features-section-homepageNestGuard {
+    margin: 50px auto;
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+                 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+                 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Linha de cada feature */
+.feature-row-homepageNestGuard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Reduzido para aproximar imagem e texto */
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+/* Conteúdo textual de cada feature */
+.feature-content-homepageNestGuard {
+    width: 40%;
+    color: #F5AB00;
+    text-align: left;
+    margin: 0; /* Removido margin para aproximar mais */
+}
+
+.feature-content-homepageNestGuard h3 {
+    font-size: 30px;
+    margin-bottom: 5px; /* Reduzido para aproximar mais */
+}
+
+.feature-content-homepageNestGuard p {
+    font-size: 18px;
+    color: #f5f5f5;
+    line-height: 1.6; /* Melhor legibilidade */
+    margin-top: 0; /* Removido margin-top para reduzir o espaço */
+}
+
+/* Imagens das features */
+.feature-chart-homepageNestGuard {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle, #FFD470, #F5AB00);
-    border-radius: 500px;
-    margin-top: 150px;
-    width: 80%;
-    max-width: 1450px; /* Limita a largura máxima */
-    height: 160px;
-    flex-wrap: wrap; /* Permite quebrar a linha quando necessário */
-    margin-left: auto;
-    margin-right: auto; /* Centraliza o banner */
-}
-
-
-.service-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #000;
-    margin-top: 20px;
-    font-family: 'Poppins', sans-serif;
-    flex: 1 1 30%; /* Cada item ocupa aproximadamente 30% da linha */
-    max-width: 30%;
-    box-sizing: border-box;
-    padding: 0 15px; /* Adiciona espaçamento interno */
     position: relative;
+    width: 50%; /* Garante que o gráfico não ocupe muito espaço */
+    margin-bottom: 10px; /* Espaço inferior reduzido */
 }
 
-/* Adiciona uma linha divisória à direita, exceto no último item da linha */
-.service-item:not(:last-child) {
-    border-right: 2px solid #000; /* Linha divisória entre os itens */
+.feature-chart-homepageNestGuard img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    object-fit: cover;
+
 }
 
-.service-item img {
-    max-width: 50px;
-    margin-right: 10px;
-}
-
-.service-item p {
-    font-size: 24px;
-    font-weight: 600;
-    margin: 0;
-}
-.ItensImgText{
+/* Valores sobrepostos na imagem */
+.chart-values-homepageNestGuard {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 6%;
-
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 24px;
+    color: #F5AB00;
 }
 
-
-  
-
-
-
-/* Para telas menores que 768px */
-@media only screen and (max-width: 768px) {
-    .iconHomepageNestGuard-01 {
-        display: none;
-    }
-    
-    .ImageIcon-componentNestGuard-01 {
-        display: none;
-    }
-
-    .titleHomepageNestGuard-01 {
-        font-size: 30px;
-        width: 100%;
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .feature-row-homepageNestGuard {
+        flex-direction: column; /* Stacking na vertical */
         text-align: center;
     }
 
-    .PrimaryButton-component-SaibaMais-01 {
-        margin-top: 20px;
-        font-size: 15px;
+    .feature-content-homepageNestGuard, 
+    .feature-chart-homepageNestGuard {
+        width: 100%; /* Ocupa 100% da largura */
     }
 
-    .Buttons-component-SaibaMais-01 {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
+    .feature-content-homepageNestGuard h3 {
+        font-size: 24px;
     }
 
-    .AllTextsNestGuard-01 {
-        margin-top: 20%;
-    }
-
-    /* Exibir o banner de serviços em uma coluna e centralizar os itens */
-    .banner-services {
-        margin-top: 30%;
-        flex-direction: column; /* Itens em coluna */
-        justify-content: center;
-        align-items: center;
-        height: auto; /* Altura automática para melhor ajuste */
-
-        padding: 20px; /* Adiciona espaçamento interno */
-        width: 70%; /* Reduz a largura em telas menores */
-    }
-
-    .service-item {
-        flex: 1 1 100%; /* Ocupa 100% da largura disponível */
-        max-width: 100%;
-        margin: 10px 0; /* Adiciona espaçamento entre os itens */
-        border-right: none; /* Remove a linha divisória entre os itens */
-    }
-
-    .service-item img {
-        max-width: 20px; /* Reduz o tamanho das imagens */
-        margin-right: 5px; /* Reduz o espaçamento entre a imagem e o texto */
-    }
-
-    .service-item p {
-        font-size: 12px; /* Reduz o tamanho do texto */
+    .feature-content-homepageNestGuard p {
+        font-size: 16px;
     }
 }
