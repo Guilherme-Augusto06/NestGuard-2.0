@@ -1,0 +1,8 @@
+.vetorFormas-Component {
+    position: relative; /* Posiciona no fluxo normal da página */
+    width: 100%; /* Faz a imagem ocupar a largura completa da tela */
+    height: 15%; /* Mantém a proporção da imagem */
+    max-width: 100%; /* Limita o tamanho máximo ao 100% da largura da tela */
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
