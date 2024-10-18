@@ -10,21 +10,35 @@
             </div>
 
             <div class="menuItens-component">
-                <!-- Botão do menu hamburger, visível apenas em resoluções menores -->
                 <button class="hamburger-button">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
 
-                <!-- Itens do menu, ocultados em resoluções menores -->
-                <a href="homepage" class="menu-link">Home</a>
-                <a href="serviços" class="menu-link">Serviços</a>
+                <a href="{% url 'welcomeHomepage' %}" 
+                   class="menu-link {% if request.path == '/homepage' %}active{% endif %}">
+                    Home
+                </a>
+
+                <!-- Item de Serviços com Submenu -->
+                <div class="dropdown">
+                    <a href="{% url 'dashboards' %}" 
+                       class="menu-link dropdown-toggle {% if request.path == '/dashboards' %}active{% endif %}">
+                        Serviços
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="dashboards" class="submenu-item">Dashboards</a>
+                        <a href="#" class="submenu-item">Sites</a>
+                        <a href="#" class="submenu-item">Segurança</a>
+                    </div>
+                </div>
+
                 <a href="#" class="menu-link">Contato</a>
                 <a href="#" class="menu-link">Valores</a>
                 <a href="#" class="menu-link">Sobre</a>
             </div>
 
             <div class="Buttons-component">
-                <a href="login" class="PrimaryButton-component">
+                <a href="{% url 'login' %}" class="PrimaryButton-component">
                     <span class="material-symbols-outlined">login</span>
                     Entrar
                 </a>
@@ -33,9 +47,28 @@
     </nav>
 </header>
 
+
 <script>
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    dropdownToggle.addEventListener('click', (event) => {
+        event.preventDefault();  // Evita o redirecionamento
+        dropdownMenu.classList.toggle('show');
+    });
+
+    // Fechar o dropdown ao clicar fora dele
+    document.addEventListener('click', (event) => {
+        const isClickInside = dropdownToggle.contains(event.target) || dropdownMenu.contains(event.target);
+
+        if (!isClickInside) {
+            dropdownMenu.classList.remove('show');
+        }
+    });
+
     // Script para alternar a exibição do menu em resoluções menores
     document.querySelector('.hamburger-button').addEventListener('click', () => {
         document.querySelector('.menuItens-component').classList.toggle('active');
     });
+
 </script>

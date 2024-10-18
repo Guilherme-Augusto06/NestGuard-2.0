@@ -4,8 +4,8 @@ from django.shortcuts import render
 def homepage(request):
     return render(request, 'homepage.html')
 
-def serviços(request):
-    return render(request, 'serviços.html')
+def dashboards(request):
+    return render(request, 'dashboards.html')
 
 def login(request):
     return render(request, 'login.html')
@@ -15,3 +15,6 @@ def cadastro(request):
 
 def welcomeHomepage(request):
     return render(request, 'welcomeHomepage.html')
+
+def sites(request):
+    return render(request, 'sites.html')

@@ -91,6 +91,49 @@
 .hamburger-button span {
     font-size: 24px;
 }
+.menu-link.active {
+    font-weight: bold;
+}
+
+/* Estilo do Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;  /* Alinhar abaixo do link "Serviços" */
+    left: 0;
+    background-color: #F5AB00;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+/* Exibir o dropdown quando a classe 'show' estiver presente */
+.dropdown-menu.show {
+    display: block;
+}
+
+.submenu-item {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submenu-item:hover {
+    background-color: #000000;
+    color: white;
+    border-radius: 10px;
+}
+
 
 /* Exibir o menu hamburger e ocultar os links em resoluções menores */
 @media only screen and (max-width: 768px) {

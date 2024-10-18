@@ -3,75 +3,47 @@
 
 {% block body %}
 {% include "navbar.html" %}
-
-
-<div class="background-container">
-    <img src="{% static 'img/vector.png' %}" alt="Fundo" class="background-img">
-
-    <header class="header-homepageNestGuard">
-        <div class="title-container">
+<div class="fundoQuadrado">
+    <div class="itensHomepageNestGuard-01">
+        <div class="ItensImgText">
+            <div class="textsHomepageNestGuard-01">
+                <div id="svg-containerNestGuard" class="AllTextsNestGuard-01">
+                    <h1 class="titleHomepageNestGuard-01"><span class="highlight-01">Conectando</span> você às</h1>
+                    <h1 class="titleHomepageNestGuard-01">soluções mais <span class="highlight-01">inovadoras</span>!</h1>
+                    <div class="Buttons-component-SaibaMais-01" style="margin-top: 40px;">
+                        <a href="dashboards" class="PrimaryButton-component-SaibaMais-01">
+                            Ver serviços
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
             
-            <h1 style="color: black;">Monitore sua empresa em <br>tempo real com dashboards</h1>
-            <img src="{% static 'img/dashboardWebmin.png' %}" alt="Logo" class="logo-img">
+            <div class="iconHomepageNestGuard-01">
+                <img src="{% static 'img/iconImage.png' %}" alt="ImageIcon" class="ImageIcon-componentNestGuard-01">
+            </div>
         </div>
-    </header>
+        
+    </div>  
+
+    <!-- Adicionando o novo banner -->
+    <div class="banner-services">
+        <div class="service-item">
+            <img src="{% static 'img/performance.png' %}" alt="Desenvolvimento de site">
+            <p>Desenvolvimento de site</p>
+        </div>
+        <div class="service-item">
+            <img src="{% static 'img/dashboard.png' %}" alt="Dashboards personalizados" >
+            <p>Dashboards personalizados</p>
+        </div>
+        <div class="service-item">
+            <img src="{% static 'img/protect.png' %}" alt="Proteção e manutenção">
+            <p>Proteção e manutenção</p>
+        </div>
+    </div>
+    
+
 </div>
 
-<section class="tecnologias-homepageNestGuard">
-    <h2>Principais tecnologias</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat est. 
-       Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam. Vitae et, tortor pulvinar risus pulvinar sit amet. 
-       Id vel in nam malesuada.</p>
 
-    <div class="container-tecnologias-homepageNestGuard">
-        <div class="item-homepageNestGuard">
-            <img src="{% static 'img/timeIcon.png' %}" alt="Monitoramento Icone">
-            <h3>Monitoramento</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat.</p>
-        </div>
-        <div class="item-homepageNestGuard">
-            <img src="{% static 'img/PcIcon.png' %}" alt="Sistema Icone">
-            <h3>Sistema</h3>
-            <p>Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam. Vitae et, tortor pulvinar risus pulvinar.</p>
-        </div>
-        <div class="item-homepageNestGuard">
-            <img src="{% static 'img/foguteIcon.png' %}" alt="Performance Icone">
-            <h3>Melhor performance</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat.</p>
-        </div>
-    </div>
-</section>
-<section class="features-section-homepageNestGuard">
-    <div class="feature-row-homepageNestGuard">
-        <div class="feature-content-homepageNestGuard">
-            <h3>Automação</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat est. Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam.</p>
-        </div>
-        <div class="feature-chart-homepageNestGuard">
-            <img src="{% static 'img/dashboard1.png' %}" alt="Gráfico Radar">
-
-        </div>
-    </div>
-
-    <div class="feature-row-homepageNestGuard">
-        <div class="feature-chart-homepageNestGuard">
-            <img src="{% static 'img/dashboard2.png' %}" alt="Gráfico de Barras">
-        </div>
-        <div class="feature-content-homepageNestGuard">
-            <h3>Sistema customizado</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat est. Vitae et, tortor pulvinar risus pulvinar sit amet.</p>
-        </div>
-    </div>
-
-    <div class="feature-row-homepageNestGuard">
-        <div class="feature-content-homepageNestGuard">
-            <h3>Dashboards</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat est. Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam.</p>
-        </div>
-        <div class="feature-chart-homepageNestGuard">
-            <img src="{% static 'img/dashboard3.png' %}" alt="Paginação de Indicadores">
-        </div>
-    </div>
-</section>
-{% include "vectorFooter.html" %}
 {% endblock %}
