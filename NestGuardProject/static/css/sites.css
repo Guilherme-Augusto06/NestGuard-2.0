@@ -49,14 +49,16 @@
 
 .cardSitesNestGuard button {
     background-color: #000;
-    color: #fff;
+    color: #F5AB00;
     border: none;
-    padding: 10px 20px;
+    padding: 6px 18px;
     border-radius: 25px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
+    margin-top: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .cardSitesNestGuard button:hover {
-    background-color: #333;
+    transform: scale(1.1); /* Aumenta 10% no hover */
 }

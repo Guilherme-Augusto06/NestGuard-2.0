@@ -22,7 +22,7 @@
                 <!-- Item de Serviços com Submenu -->
                 <div class="dropdown">
                     <a href="{% url 'dashboards' %}" 
-                       class="menu-link dropdown-toggle {% if request.path == '/dashboards' %}active{% endif %}">
+                       class="menu-link dropdown-toggle {% if request.path == '/dashboards' or request.path == '/sites' or request.path == '/segurança' %}active{% endif %}">
                         Serviços
                     </a>
                     <div class="dropdown-menu">
