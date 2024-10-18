@@ -4,51 +4,54 @@
 {% block body %}
 {% include "navbar.html" %}
 
-
+{% for item in nestGuardSegurançaPage %}
 <div class="background-container">
     <img src="{% static 'img/vector.png' %}" alt="Fundo" class="background-img">
 
     <header class="header-homepageNestGuard">
         <div class="title-container">
 
-            <h1 style="color: black;">Proteção e<br>Manutenção!</h1>
+            <h1 style="color: black;">{{ item.titulo1 }}</h1>
             <img src="{% static 'img/securityImg.png' %}" alt="Logo" class="logo-img">
         </div>
     </header>
 </div>
 <section class="tecnologias-homepageNestGuard sitesSectionInf">
-    <h2>Segurança?</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat
-        est. Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam. Vitae et, tortor pulvinar risus pulvinar sit
-        amet.
-        Id vel in nam malesuada.</p>
+    <h2>{{ item.titulo2 }}</h2>
+    <p>{{ item.descricao2 }}</p>
 
-    <h2 style="margin-top: 10%;">Criptografia e Firewall</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum nisi aliquet volutpat pellentesque volutpat
-        est. Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam. Vitae et, tortor pulvinar risus pulvinar sit
-        amet.
-        Id vel in nam malesuada.</p>
+    <h2 style="margin-top: 10%;">{{ item.titulo3 }}</h2>
+    <p>{{ item.descricao2 }}</p>
 
-
+        <div id="textModal" class="text-modal">
+            <div class="text-modal-content">
+                <span class="text-close">&times;</span> <!-- Botão de fechar -->
+                <h2 id="text-modal-title"></h2>
+                <p id="text-modal-description"></p>
+            </div>
+        </div>
+        
 
         <div class="steps-container">
-            <a href="#" class="step">
+            <a class="step" onclick="showTextModal('Passo 1', 'Texto explicativo do passo 1.')">
                 <div class="circle">01</div>
             </a>
-            <a href="#" class="step">
+            <a class="step" onclick="showTextModal('Passo 2', 'Texto explicativo do passo 2.')">
                 <div class="circle">02</div>
             </a>
-            <a href="#" class="step">
+            <a class="step" onclick="showTextModal('Passo 3', 'Texto explicativo do passo 3.')">
                 <div class="circle">03</div>
             </a>
-            <a href="#" class="step">
+            <a class="step" onclick="showTextModal('Passo 4', 'Texto explicativo do passo 4.')">
                 <div class="circle">04</div>
             </a>
         </div>
+    
         
 
 </section>
 
+{% endfor %}
 
 
 {% include "vectorFooter.html" %}

@@ -6,7 +6,11 @@ def homepage(request):
     return render(request, 'homepage.html')
 
 def dashboards(request):
-    return render(request, 'dashboards.html')
+    context = {}
+    nestGuardDashboradPage = NestGuardDashboradPage.objects.all()
+    context['nestGuardDashboradPage'] = nestGuardDashboradPage
+    return render(request, 'dashboards.html', context)
+
 
 def login(request):
     return render(request, 'login.html')
@@ -26,4 +30,7 @@ def sites(request):
     return render(request, 'sites.html', context)
 
 def segurança(request):
-    return render(request, 'segurança.html')
+    context = {}
+    nestGuardSegurançaPage = NestGuardSegurançaPage.objects.all()
+    context['nestGuardSegurançaPage'] = nestGuardSegurançaPage
+    return render(request, 'segurança.html', context)
