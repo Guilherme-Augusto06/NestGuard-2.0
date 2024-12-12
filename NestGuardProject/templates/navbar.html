@@ -25,16 +25,24 @@
                        class="menu-link dropdown-toggle {% if request.path == '/dashboards' or request.path == '/sites' or request.path == '/segurança' %}active{% endif %}">
                         Serviços
                     </a>
+                    
                     <div class="dropdown-menu">
                         <a href="dashboards" class="submenu-item">Dashboards</a>
                         <a href="sites" class="submenu-item">Sites</a>
                         <a href="segurança" class="submenu-item">Segurança</a>
+
+                        
                     </div>
                 </div>
 
                 <a href="#" class="menu-link">Contato</a>
                 <a href="#" class="menu-link">Valores</a>
                 <a href="#" class="menu-link">Sobre</a>
+                <a href="{% url 'login' %}" class="PrimaryButton-component menu-link">
+                    <span class="material-symbols-outlined">login</span>
+                    Entrar
+                </a>
+                
             </div>
 
             <div class="Buttons-component">

@@ -180,4 +180,12 @@
     .feature-content-homepageNestGuard p {
         font-size: 16px;
     }
+    .title-container img{
+        width: 250px;
+        height: 150px;
+    }
+    .title-container h1{
+        font-size: 24px;
+        margin-left: 20px;
+    }
 }
