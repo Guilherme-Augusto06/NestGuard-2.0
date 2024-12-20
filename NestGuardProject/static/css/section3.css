@@ -1,3 +1,12 @@
+/* ATENÇÃO 
+ESTE CSS VALE PARA A SECTION 4 E PARA SECTION 3 
+*/
+
+/* ATENÇÃO 
+ESTE CSS VALE PARA A SECTION 4 E PARA SECTION 3 
+*/
+
+
 /* Seção principal */
 .business-stats-section {
     display: flex;
@@ -41,7 +50,7 @@
   
   .stats-row {
     display: flex;
-    gap: 30px;
+    gap: 50px;
   }
   
   .stat-item {
