@@ -1,82 +1,71 @@
 {% load static %}
 
-<header class="AllItens">
-    <nav class="navbarAll">
-        <div class="navbarComplete-component">
-            <div class="logo-component">
-                <a href="/">
-                    <img src="{% static 'img/IconeNestGuard.png' %}" alt="Logo NestGuard">
-                </a>
-            </div>
-
-            <div class="menuItens-component">
-                <button class="hamburger-button">
-                    <span class="material-symbols-outlined">menu</span>
-                </button>
-
-                <a href="{% url 'welcomeHomepage' %}" 
-                   class="menu-link {% if request.path == '/homepage' %}active{% endif %}">
-                    Home
-                </a>
-
-                <!-- Item de Serviços com Submenu -->
-                <div class="dropdown">
-                    <a href="{% url 'dashboards' %}" 
-                       class="menu-link dropdown-toggle {% if request.path == '/dashboards' or request.path == '/sites' or request.path == '/segurança' %}active{% endif %}">
-                        Serviços
-                    </a>
-                    
-                    <div class="dropdown-menu">
-                        <a href="dashboards" class="submenu-item">Dashboards</a>
-                        <a href="sites" class="submenu-item">Sites</a>
-                        <a href="segurança" class="submenu-item">Segurança</a>
-
-                        
-                    </div>
-                </div>
-
-                <a href="#" class="menu-link">Contato</a>
-                <a href="#" class="menu-link">Valores</a>
-                <a href="#" class="menu-link">Sobre</a>
-                <a href="{% url 'login' %}" class="PrimaryButton-component menu-link">
-                    <span class="material-symbols-outlined">login</span>
-                    Entrar
-                </a>
-                
-            </div>
-
-            <div class="Buttons-component">
-                <a href="{% url 'login' %}" class="PrimaryButton-component">
-                    <span class="material-symbols-outlined">login</span>
-                    Entrar
-                </a>
-            </div>
+<!-- Navbar -->
+<header>
+    <nav>
+        <div class="logo-component">
+            <a href="/">
+                <!--Link da imagem-->
+                <img src="{% static 'img/IconeNestGuard.png' %}" alt="Logo" class="logoImage-Component">
+            </a>
         </div>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <button class="cadastro">Cadastro</button>
+        <button class="login">Login</button>
+      </ul>
     </nav>
-</header>
+  </header>
 
+  <script>
+class MobileNavbar {
+  constructor(mobileMenu, navList, navLinks) {
+    this.mobileMenu = document.querySelector(mobileMenu);
+    this.navList = document.querySelector(navList);
+    this.navLinks = document.querySelectorAll(navLinks);
+    this.activeClass = "active";
 
-<script>
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-    dropdownToggle.addEventListener('click', (event) => {
-        event.preventDefault();  // Evita o redirecionamento
-        dropdownMenu.classList.toggle('show');
+  animateLinks() {
+    this.navLinks.forEach((link, index) => {
+      link.style.animation
+        ? (link.style.animation = "")
+        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+            index / 7 + 0.3
+          }s`);
     });
+  }
 
-    // Fechar o dropdown ao clicar fora dele
-    document.addEventListener('click', (event) => {
-        const isClickInside = dropdownToggle.contains(event.target) || dropdownMenu.contains(event.target);
+  handleClick() {
+  this.navList.classList.toggle(this.activeClass);
+  this.mobileMenu.classList.toggle(this.activeClass);
+  document.body.classList.toggle("nav-open"); // Bloqueia o scroll
+  this.animateLinks();
+}
 
-        if (!isClickInside) {
-            dropdownMenu.classList.remove('show');
-        }
-    });
 
-    // Script para alternar a exibição do menu em resoluções menores
-    document.querySelector('.hamburger-button').addEventListener('click', () => {
-        document.querySelector('.menuItens-component').classList.toggle('active');
-    });
+  addClickEvent() {
+    this.mobileMenu.addEventListener("click", this.handleClick);
+  }
 
-</script>
+  init() {
+    if (this.mobileMenu) {
+      this.addClickEvent();
+    }
+    return this;
+  }
+}
+
+const mobileNavbar = new MobileNavbar(
+  ".mobile-menu",
+  ".nav-list",
+  ".nav-list li",
+);
+mobileNavbar.init();
+  </script>
