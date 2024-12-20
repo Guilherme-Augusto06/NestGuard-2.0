@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     // Trocar slides a cada 5 segundos
-    setInterval(nextSlide, 5000);
+    setInterval(nextSlide, 7000);
   
     // Adicionar eventos aos indicadores
     indicators.forEach((indicator, index) => {
