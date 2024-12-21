@@ -9,9 +9,10 @@
     height: 45px;
 }
 a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     transition: 0.3s;
+    font-family: 'poppins';
   }
 
   
@@ -48,7 +49,7 @@ nav {
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background-color: #F5AB00;
     height: 6vh;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 40px 40px 40px 40px;
     margin-left: 15%;
     margin-right: 15%;
 

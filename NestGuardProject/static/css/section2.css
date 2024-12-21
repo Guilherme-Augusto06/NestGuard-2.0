@@ -51,8 +51,8 @@
   /* Botão */
   .custom-button {
     display: inline-block;
-    background-color: #F5AB00; /* Cor laranja */
-    color: #fff;
+    background-color: #ffa500; /* Cor laranja */
+    color: #000000;
     font-size: 1rem;
     padding: 10px 20px;
     border-radius: 5px;
