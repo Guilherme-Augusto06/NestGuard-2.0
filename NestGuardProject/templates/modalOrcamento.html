@@ -13,7 +13,7 @@
         <main class="registro-orcamento-form-container">
             <h1 class="registro-orcamento-title">Registro de orçamento – <span>Totalmente grátis</span></h1>
 
-            
+
             <form method="POST" class="registro-orcamento-form">
                 {% csrf_token %}
                 <div class="registro-orcamento-form-group">
@@ -42,7 +42,82 @@
                 </div>
                 <button class="registro-orcamento-submit-button" type="submit">Enviar</button>
             </form>
-            
+
         </main>
     </div>
+
 </div>
+<!-- Spinner de carregamento -->
+<div class="custom-loader" style="display: none;"></div>
+
+
+<!-- Modal de sucesso -->
+<div class="registro-orcamento-modal" id="registro-orcamento-modal" style="display: none;">
+    <div class="registro-orcamento-modal-content">
+        <h2>Email enviado com sucesso!</h2>
+        <p>Em 24 horas entraremos em contato com você.</p>
+        <button class="registro-orcamento-modal-close" id="registro-orcamento-modal-close">Fechar</button>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".registro-orcamento-form");
+        const spinner = document.querySelector(".custom-loader");
+        const modal = document.querySelector("#registro-orcamento-modal");
+        const modalContent = modal.querySelector(".registro-orcamento-modal-content");
+        const modalCloseButton = document.querySelector("#registro-orcamento-modal-close");
+
+        // Ocultar o spinner inicialmente
+        spinner.style.display = "none";
+
+        // Função para simular a validação de email no backend
+        async function validarEmail(email) {
+            // Substitua pela chamada à API real, se necessário
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    const emailValido = email.includes("@") && email.includes("."); // Validação simples
+                    resolve(emailValido);
+                }, 1000); // Simulação de tempo de resposta
+            });
+        }
+
+        // Manipular envio do formulário
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault(); // Impedir envio padrão do formulário
+
+            // Mostrar spinner
+            spinner.style.display = "block";
+
+            // Coletar o e-mail do formulário
+            const emailField = form.querySelector('input[name="email_cliente"]');
+            const email = emailField.value;
+
+            // Validar e-mail
+            const emailEhValido = await validarEmail(email);
+
+            // Ocultar spinner
+            spinner.style.display = "none";
+
+            if (!emailEhValido) {
+                alert("O e-mail informado não é válido. Por favor, verifique e tente novamente.");
+                return;
+            }
+
+            // Mostrar modal de sucesso
+            modal.style.display = "flex";
+        });
+
+        // Fechar modal ao clicar no botão de fechar
+        modalCloseButton.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+
+        // Fechar modal ao clicar fora do conteúdo da modal
+        modal.addEventListener("click", function (e) {
+            if (!modalContent.contains(e.target)) {
+                modal.style.display = "none";
+            }
+        });
+    });
+
+</script>
