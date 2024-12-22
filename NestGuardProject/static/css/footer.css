@@ -4,7 +4,7 @@
     align-items: center; /* Centraliza os itens verticalmente */
     flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
     padding: 40px 20px;
-    background-color: #1c1e22; /* Fundo escuro */
+    background-color: #181818; /* Fundo escuro */
     color: #fff; /* Texto branco */
     gap: 20px; /* Espaçamento entre as seções */
 }
@@ -94,16 +94,20 @@
     padding: 10px;
     border: none;
     border-radius: 5px;
+    background-color: #2b2e33; /* Fundo escuro do input */
     flex: 1;
     max-width: 200px; /* Define um tamanho máximo para o campo de input */
+}
+.subscribe-input::placeholder {
+    color: #ccc; /* Cor do placeholder */
 }
 
 .subscribe-button {
     padding: 10px;
-    background-color: #f5ab00;
+    background-color: #ffa500;
     border: none;
     border-radius: 5px;
-    color: #fff;
+    color: #000000;
     font-size: 1rem;
     cursor: pointer;
 }

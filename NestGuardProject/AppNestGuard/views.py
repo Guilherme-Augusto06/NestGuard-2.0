@@ -5,10 +5,11 @@ from .models import *
 def homepage(request):
     return render(request, 'homepage.html')
 
-def dashboards(request):
-    context = {}
-    nestGuardDashboradPage = NestGuardDashboradPage.objects.all()
-    context['nestGuardDashboradPage'] = nestGuardDashboradPage
-    return render(request, 'dashboards.html', context)
 
 
+
+def orcamento(request):
+    return render(request, 'orcamento.html')
+
+def registro_orcamento(request):
+    return render(request, 'registro_orcamento.html')
