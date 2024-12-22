@@ -1,5 +1,7 @@
-from django.shortcuts import render
 from .models import *
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import OrcamentoForm
 
 # Create your views here.
 def homepage(request):
@@ -9,7 +11,28 @@ def homepage(request):
 
 
 def orcamento(request):
-    return render(request, 'orcamento.html')
+    form = OrcamentoForm()
+    return render(request, 'orcamento.html' , {'form': form})
+
+
 
 def registro_orcamento(request):
-    return render(request, 'registro_orcamento.html')
+    """
+    View para exibir e processar o formulário de registro de orçamento.
+    """
+    if request.method == 'POST':
+        form = OrcamentoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Orçamento registrado com sucesso!')
+            return redirect('pagina_de_sucesso')  # Substitua pela URL da página de sucesso
+        else:
+            messages.error(request, 'Houve um erro no registro. Verifique os dados e tente novamente.')
+    else:
+        form = OrcamentoForm()
+
+    # Adicione debug temporário
+    print(f"Formulário: {form}")
+
+    return render(request, 'registro_orcamento.html', {'form': form})
+

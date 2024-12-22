@@ -12,40 +12,37 @@
         </aside>
         <main class="registro-orcamento-form-container">
             <h1 class="registro-orcamento-title">Registro de orçamento – <span>Totalmente grátis</span></h1>
-            <form class="registro-orcamento-form">
+
+            
+            <form method="POST" class="registro-orcamento-form">
+                {% csrf_token %}
                 <div class="registro-orcamento-form-group">
-                    <label for="nome-cliente">Nome</label>
-                    <input type="text" id="nome-cliente" placeholder="Digite seu nome">
+                    {{ form.nome_cliente.label_tag }}
+                    {{ form.nome_cliente }}
                 </div>
                 <div class="registro-orcamento-form-group">
-                    <label for="telefone-cliente">Número do celular</label>
-                    <input type="text" id="telefone-cliente" placeholder="Digite seu número">
+                    {{ form.telefone_cliente.label_tag }}
+                    {{ form.telefone_cliente }}
                 </div>
                 <div class="registro-orcamento-form-group">
-                    <label for="email-cliente">Email</label>
-                    <input type="email" id="email-cliente" placeholder="Digite seu email">
+                    {{ form.email_cliente.label_tag }}
+                    {{ form.email_cliente }}
                 </div>
                 <div class="registro-orcamento-form-group">
-                    <label for="descricao-servico">Descreva o serviço</label>
-                    <textarea id="descricao-servico" placeholder="Faça um texto explicativo"></textarea>
+                    {{ form.descricao_servico.label_tag }}
+                    {{ form.descricao_servico }}
                 </div>
                 <div class="registro-orcamento-form-group">
-                    <label for="data-entrega">Selecione a data de entrega desejada</label>
-                    <input type="date" id="data-entrega">
+                    {{ form.data_entrega.label_tag }}
+                    {{ form.data_entrega }}
                 </div>
                 <div class="registro-orcamento-form-group">
-                    <label for="tipo-servico">Selecione o tipo de serviços</label>
-                    <select id="tipo-servico">
-                        <option>Criação de site</option>
-                        <option>Criação de design</option>
-                        <option>Criação de bot</option>
-                        <option>Hospedagem</option>
-                        <option>Automação</option>
-                        <option>outros</option>
-                    </select>
+                    {{ form.tipo_servico.label_tag }}
+                    {{ form.tipo_servico }}
                 </div>
-                <button class="registro-orcamento-submit-button">Seguinte</button>
+                <button class="registro-orcamento-submit-button" type="submit">Enviar</button>
             </form>
+            
         </main>
     </div>
 </div>
