@@ -11,8 +11,22 @@ def homepage(request):
 
 
 def orcamento(request):
-    form = OrcamentoForm()
-    return render(request, 'orcamento.html' , {'form': form})
+    """
+    Exibe e processa o formulário de orçamento.
+    """
+    if request.method == 'POST':
+        form = OrcamentoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Orçamento registrado com sucesso!')
+            return redirect('orcamento')  # Redireciona para a mesma página após o sucesso
+        else:
+            messages.error(request, 'Houve um erro no registro. Verifique os dados e tente novamente.')
+    else:
+        form = OrcamentoForm()
+
+    # Renderiza o formulário na página de orçamento
+    return render(request, 'orcamento.html', {'form': form})
 
 
 
